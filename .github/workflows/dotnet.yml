@@ -1,5 +1,10 @@
 name: .NET
 
+defaults:
+  run:
+    working-directory: TestDotNet
+
+
 on:
   push:
     branches: [ master ]
