@@ -1,0 +1,14 @@
+name: Test trigger
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  test_reusable:
+    uses: JackGilmoreOrg/.github/.github/workflows/reusable.yml@main
+    secrets: inherit
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{secrets.TEST_SECRET}}
